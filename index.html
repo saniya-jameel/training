@@ -6,8 +6,128 @@
 </head>
 <body>
 <input type = "button" onclick = "sayHello()" value = "Say Hello" />
+<br>
+<br>
+//Basic Validation
+<form action = "/cgi-bin/test.cgi" name = "Basic Validation Form" onsubmit = "return(basicValidate());">
+    <table cellspacing = "2" cellpadding = "2" border = "1">
+        <tr>
+            <td align = "right">Name</td>
+            <td><input type = "text" name = "Name" /></td>
+        </tr>
 
-//examples
+        <tr>
+            <td align = "right">EMail</td>
+            <td><input type = "text" name = "EMail" /></td>
+        </tr>
+        <tr>
+            <td align = "right">Zip Code</td>
+            <td><input type = "text" name = "Zip" /></td>
+        </tr>
+        <tr>
+            <td align = "right">Country</td>
+            <td>
+                <select name = "Country">
+                    <option value = "-1" selected>[choose yours]</option>
+                    <option value = "1">USA</option>
+                    <option value = "2">UK</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align = "right"></td>
+            <td><input type = "submit" value = "Submit" /></td>
+        </tr>
+
+    </table>
+</form>
+
+<br>
+//Data format validation
+<form action = "/cgi-bin/test.cgi" name = "Data format validation Form" onsubmit = "return(validateEmail());">
+    <table cellspacing = "2" cellpadding = "2" border = "1">
+        <tr>
+            <td align = "right">EMail</td>
+            <td><input type = "text" name = "EMail" /></td>
+        </tr>
+        <tr>
+            <td align = "right"></td>
+            <td><input type = "submit" value = "Submit" /></td>
+        </tr>
+    </table>
+</form>
+
+<br>
+//Manual Animation
+<form>
+    <img id="manualImage" src="https://www.tutorialspoint.com/javascript/images/html.gif"/>
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Click Me" onClick="moveRight();"/>
+</form>
+
+<br>
+//Automated Animation
+<form>
+    <img id = "automatedImage" src = "https://www.tutorialspoint.com/javascript/images/html.gif" />
+    <p>Click the buttons below to handle animation</p>
+    <input type = "button" value = "Start" onclick = "moveRight();" />
+    <input type = "button" value = "Stop" onclick = "stop();" />
+</form>
+
+<br>
+//Controlling Multimedia
+<embed id = "demo" name = "demo"
+       src = "http://www.amrood.com/games/kumite.swf"
+       width = "318" height = "300" play = "false" loop = "false"
+       pluginspage = "http://www.macromedia.com/go/getflashplayer"
+       swliveconnect = "true">
+
+<form name = "form" id = "form" action = "#" method = "get">
+    <input type = "button" value = "Start" onclick = "play();" />
+    <input type = "button" value = "Stop" onclick = "stop();" />
+    <input type = "button" value = "Rewind" onclick = "rewind();" />
+</form>
+
+<br>
+//Rollover with a Mouse Event
+<p>Move your mouse over the image to see the result</p>
+<a href = "#" onMouseOver = "document.myImage.src = image2.src;"
+   onMouseOut = "document.myImage.src = image1.src;">
+    <img name = "myImage" src = "https://www.tutorialspoint.com/javascript/images/html.gif" />
+</a>
+
+<br>
+//Image Map
+<form name = "myform">
+    <input type = "text" name = "stage" size = "20" />
+</form>
+
+<!-- Create  Mappings -->
+<img src = "https://www.tutorialspoint.com/javascript/images/usemap.gif" alt = "HTML Map" border = "0" usemap = "#tutorials"/>
+
+<map name = "tutorials">
+    <area shape="poly"
+          coords = "74,0,113,29,98,72,52,72,38,27"
+          href = "/perl/index.htm" alt = "Perl Tutorial"
+          target = "_self"
+          onMouseOver = "showTutorial('perl')"
+          onMouseOut = "showTutorial('')"/>
+
+    <area shape = "rect"
+          coords = "22,83,126,125"
+          href = "/html/index.htm" alt = "HTML Tutorial"
+          target = "_self"
+          onMouseOver = "showTutorial('html')"
+          onMouseOut = "showTutorial('')"/>
+
+    <area shape = "circle"
+          coords = "73,168,32"
+          href = "/php/index.htm" alt = "PHP Tutorial"
+          target = "_self"
+          onMouseOver = "showTutorial('php')"
+          onMouseOut = "showTutorial('')"/>
+</map>
+
 <script type = "text/javascript">
     // Local & Global variables
     var myVar = "global";      // Declare a global variable
@@ -17,8 +137,12 @@
     }
 
     //Arithmatic operations
+    document.write("<br />");
+    document.write("<br />");
+    document.write("Arithmatic operations");
     var a = 33;
     var b = 10;
+    document.write("<br />");
     document.write("a + b = " + (a + b));
     document.write("<br />");
     document.write("a - b = " + (a - b));
@@ -33,10 +157,13 @@
     document.write("<br />");
     document.write("--b = " + (--b));
     document.write("<br />");
+    document.write("<br />");
 
     //Comparison Operators
+    document.write("Comparison operations");
     a = 10;
     b = 20;
+    document.write("<br />");
     document.write("(a == b) => " + (a == b));
     document.write("<br />");
     document.write("(a < b) => " + (a < b));
@@ -49,20 +176,26 @@
     document.write("<br />");
     document.write("(a <= b) => " + (a <= b));
     document.write("<br />");
+    document.write("<br />");
 
     //Logical Operators
+    document.write("Logical operations");
     a = true;
     b = false;
+    document.write("<br />");
     document.write("(a && b) => " + (a && b));
     document.write("<br />");
     document.write("(a || b) => " + (a || b));
     document.write("<br />");
     document.write("!(a && b) => " + (!(a && b)));
     document.write("<br />");
+    document.write("<br />");
 
     //Bitwise Operators
+    document.write("Bitwise operations");
     a = 2; // Bit presentation 10
     b = 3; // Bit presentation 11
+    document.write("<br />");
     document.write("(a & b) => " + (a & b));
     document.write("<br />");
     document.write("(a | b) => " + (a | b));
@@ -75,10 +208,13 @@
     document.write("<br />");
     document.write("(a >> b) => " + (a >> b));
     document.write("<br />");
+    document.write("<br />");
 
     //Assignment Operators
+    document.write("Assignment operations");
     a = 33;
     b = 10;
+    document.write("<br />");
     document.write("Value of a => (a = b) => " + (a = b));
     document.write("<br />");
     document.write("Value of a => (a += b) => " + (a += b));
@@ -91,15 +227,39 @@
     document.write("<br />");
     document.write("Value of a => (a %= b) => " + (a %= b));
     document.write("<br />");
+    document.write("<br />");
 
     //Miscellaneous Operators
+    document.write("Miscellaneous operations");
     a = 10;
     b = 20;
+    document.write("<br />");
     document.write ("((a > b) ? 100 : 200) => " + ((a > b) ? 100 : 200));
     document.write("<br />");
     document.write ("((a < b) ? 100 : 200) => " + ((a < b) ? 100 : 200));
     document.write("<br />");
-    
+    document.write("<br />");
+
+    //Regular Expressions
+    document.write("Regular Expressions");
+    document.write("<br />");
+    var regExp = /\w+\s/g;
+    var str = 'fee fi fo fum';
+    var myArray = str.match(regExp);
+    document.write("result after RegExp match: " + myArray);
+    document.write("<br />");
+    document.write("<br />");
+
+    //Checking for Plug-Ins
+    media = navigator.mimeTypes["video/quicktime"];
+    if (media) {
+        document.write("<embed src = 'https://www.tutorialspoint.com/javascript/quick.mov' height = 100 width = 100>");
+    } else {
+        document.write("<img src = 'https://www.tutorialspoint.com/javascript/quick.gif' height = 100 width = 100>");
+    }
+    document.write("<br />");
+    document.write("<br />");
+
 </script>
 </body>
 </html>
