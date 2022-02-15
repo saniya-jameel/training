@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type = "text/javascript" src = "index.js" ></script>
+</head>
+<body>
+<input type = "button" onclick = "sayHello()" value = "Say Hello" />
+
+//examples
+<script type = "text/javascript">
+    // Local & Global variables
+    var myVar = "global";      // Declare a global variable
+    function checkscope( ) {
+        var myVar = "local";    // Declare a local variable
+        document.write(myVar);
+    }
+
+    //Arithmatic operations
+    var a = 33;
+    var b = 10;
+    document.write("a + b = " + (a + b));
+    document.write("<br />");
+    document.write("a - b = " + (a - b));
+    document.write("<br />");
+    document.write("a * b = " + (a * b));
+    document.write("<br />");
+    document.write("a / b = " + (a / b));
+    document.write("<br />");
+    document.write("a % b = " + (a % b));
+    document.write("<br />");
+    document.write("++a = " + (++a));
+    document.write("<br />");
+    document.write("--b = " + (--b));
+    document.write("<br />");
+
+    //Comparison Operators
+    a = 10;
+    b = 20;
+    document.write("(a == b) => " + (a == b));
+    document.write("<br />");
+    document.write("(a < b) => " + (a < b));
+    document.write("<br />");
+    document.write("(a > b) => " + (a > b));
+    document.write("<br />");
+    document.write("(a != b) => " + (a != b));
+    document.write("<br />");
+    document.write("(a >= b) => " + (a >= b));
+    document.write("<br />");
+    document.write("(a <= b) => " + (a <= b));
+    document.write("<br />");
+
+    //Logical Operators
+    a = true;
+    b = false;
+    document.write("(a && b) => " + (a && b));
+    document.write("<br />");
+    document.write("(a || b) => " + (a || b));
+    document.write("<br />");
+    document.write("!(a && b) => " + (!(a && b)));
+    document.write("<br />");
+
+    //Bitwise Operators
+    a = 2; // Bit presentation 10
+    b = 3; // Bit presentation 11
+    document.write("(a & b) => " + (a & b));
+    document.write("<br />");
+    document.write("(a | b) => " + (a | b));
+    document.write("<br />");
+    document.write("(a ^ b) => " + (a ^ b));
+    document.write("<br />");
+    document.write("(~b) => " + (~b));
+    document.write("<br />");
+    document.write("(a << b) => " + (a << b));
+    document.write("<br />");
+    document.write("(a >> b) => " + (a >> b));
+    document.write("<br />");
+
+    //Assignment Operators
+    a = 33;
+    b = 10;
+    document.write("Value of a => (a = b) => " + (a = b));
+    document.write("<br />");
+    document.write("Value of a => (a += b) => " + (a += b));
+    document.write("<br />");
+    document.write("Value of a => (a -= b) => "); + (a -= b);
+    document.write("<br />");
+    document.write("Value of a => (a *= b) => " + (a *= b));
+    document.write("<br />");
+    document.write("Value of a => (a /= b) => " + (a /= b));
+    document.write("<br />");
+    document.write("Value of a => (a %= b) => " + (a %= b));
+    document.write("<br />");
+
+    //Miscellaneous Operators
+    a = 10;
+    b = 20;
+    document.write ("((a > b) ? 100 : 200) => " + ((a > b) ? 100 : 200));
+    document.write("<br />");
+    document.write ("((a < b) ? 100 : 200) => " + ((a < b) ? 100 : 200));
+    document.write("<br />");
+    
+</script>
+</body>
+</html>
